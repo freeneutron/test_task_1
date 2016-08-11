@@ -1,0 +1,76 @@
+<?php $this->headScript()
+    ->appendFile('//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js')
+    ->prependScript('
+      dojoConfig= {
+        async: true,
+        baseUrl: "/public/js/app"
+      }
+    ')
+; ?>
+
+
+<?php $this->headScript()
+  ->appendFile('/js/app/draw.js')
+  ->prependFile('//code.jquery.com/ui/1.11.4/jquery-ui.js')
+?>
+<?php echo $this->headLink()
+  ->prependStylesheet('//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css')
+?>
+<style>
+  .desk_item{
+    width: 20px;
+    height: 20px;
+    border: 2px solid #aaa;
+    border-radius: 5px;
+  }
+  #save_batton{
+    margin-top: 20px;
+  }
+  #submit_message{
+    display: none;
+    background-color: #ffcccc;
+    padding: 10px;
+  }
+  .popup{
+    display: none;
+  }
+  .ui-dialog .ui-dialog-titlebar{
+    display:none;
+  }
+  .ui-dialog{
+    font-size: 14px;
+  }
+  .button_box{
+    margin-top: 20px;
+  }
+</style>
+<script>
+
+</script>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Рисование</h3>
+  </div>
+
+  <div class="panel-body">
+    <div id="desk">
+    </div>
+    <button id="save_batton">Сохранить</button>
+  </div>
+</div>
+
+
+
+<div>
+  <div id="popup_set_name" class='popup' title='Сохранение изображения'>
+    <div id="submit_message">
+      Такое имя уже существует!
+    </div>
+    <h4>Введите имя изображения</h4>
+    <input name="name" id="name" value="a1">
+    <div class="button_box">
+      <button type="button" id="submit">Отправить</button>
+      <button type="button" id="cancel">Отмена</button>
+    </div>
+	</div>
+</div>

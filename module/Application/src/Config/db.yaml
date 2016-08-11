@@ -1,0 +1,26 @@
+table:
+  test:
+    field:
+      f1: 'CHAR(10)'
+      f2: INTEGER
+      f3: INTEGER
+      f4:
+    index:
+      f11:
+        field:
+          f1
+          f2
+        type: UNIQUE
+      f3: UNIQUE
+      f4:
+  desk:
+    field:
+      name: CHAR(255)
+      time_create: INTEGER
+      time_last_modify: INTEGER
+      timer: INTEGER
+      state_array: TEXT
+    index:
+      name: UNIQUE
+sqlite:
+  path: data.sqlite

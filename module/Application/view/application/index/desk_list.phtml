@@ -1,0 +1,56 @@
+
+<?php $this->headScript()
+  ->appendFile('//code.jquery.com/ui/1.11.4/jquery-ui.js')
+  ->appendFile('/js/app/desk_list.js')
+?>
+<?php echo $this->headLink()
+  ->prependStylesheet('//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css')
+?>
+<style>
+  .desk_item{
+    width: 20px;
+    height: 20px;
+    border: 2px solid #aaa;
+    border-radius: 5px;
+  }
+  .table_head{
+    padding: 10px;
+    background-color: #ccffcc;
+  }
+  .table_item{
+    padding: 10px;
+  }
+  #save_batton{
+    margin-top: 20px;
+  }
+  .popup{
+    display: none;
+  }
+  .ui-dialog .ui-dialog-titlebar{
+    display:none;
+  }
+  .ui-dialog{
+    font-size: 14px;
+  }
+</style>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Список сохраненных досок</h3>
+  </div>
+
+  <div class="panel-body">
+    <div id="desk_list_table">
+
+    </div>
+    <button id="load_batton">Загрузить</button>
+    <button id="delete_batton">Удалить</button>
+  </div>
+</div>
+
+
+<div>
+  <div id="popup_set_name" class='popup' title='Выберите пункт таблицы'>
+    <h4>Введите имя изображения</h4>
+    <button type="button" id="close_button">Закрыть</button>
+	</div>
+</div>
